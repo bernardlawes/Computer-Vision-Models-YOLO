@@ -42,15 +42,30 @@ pip list
 ```
 
 ### 5️⃣ Running YOLO Model
-To run the YOLO model on an image:
+To run the YOLO model on an image file and display to screen:
 ```sh
-python run_model.py --weights yolov8n.pt --source input.jpg
+python <filename>.py input.jpg --show True
 ```
-Optional: Running on a Video Stream
+Running on an image file and saving to disk:
 ```sh
-python run_model.py --weights yolov8n.pt --source video.mp4
+python <filename>.py input.jpg --save True
 ```
-
+Running on a Video File
+```sh
+python run_model.py video.mp4 --show True
+```
+Running on a Video File and saving to disk
+```sh
+python run_model.py video.mp4 --ssave True
+```
+Running on a Live Camera
+```sh
+python run_model.py 0 --show True
+```
+Running on a Live Camera and saving to disk
+```sh
+python run_model.py 0 --ssave True
+```
 ### 6️⃣ Updating Dependencies
 If new dependencies are added, update requirements.txt:
 ```sh
