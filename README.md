@@ -42,30 +42,32 @@ pip list
 ```
 
 ### 5️⃣ Running YOLO Model
-To run the YOLO model on an image file and display to screen:
+To run the YOLO model on an image file:
 ```sh
-python .\scripts\<filename>.py input.jpg --show True
-```
-Running on an image file and saving to disk:
-```sh
-python .\scripts\<filename>.py input.jpg --save True
+python vision.py input.jpg model.pt --show True
 ```
 Running on a Video File
 ```sh
-python .\scripts\<filename>.py video.mp4 --show True
-```
-Running on a Video File and saving to disk
-```sh
-python .\scripts\<filename>.py video.mp4 --ssave True
+python vision.py video.mp4 model.pt --show True
 ```
 Running on a Live Camera
 ```sh
-python .\scripts\<filename>.py 0 --show True
+python vision.py 0 --show True
 ```
-Running on a Live Camera and saving to disk
+### 5.5 Options
+Running on Image and saving to disk
 ```sh
-python .\scripts\<filename>.py 0 --ssave True
+python vision.py image.jpg --destination .\output\
 ```
+Running on Image and showing to screen
+```sh
+python vision.py image.jpg --show True
+```
+Running on Video, showing to screen, and Using GPU (By default, GPU use is True)
+```sh
+python vision.py image.jpg --show True --gpu True
+```
+
 ### 6️⃣ Updating Dependencies
 If new dependencies are added, update requirements.txt:
 ```sh
