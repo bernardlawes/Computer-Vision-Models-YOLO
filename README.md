@@ -54,7 +54,7 @@ Running on a Live Camera
 ```sh
 python vision.py 0 --show True
 ```
-### 5.5 Options
+### 5.5 Optional Arguments
 Running on Image and saving to disk
 ```sh
 python vision.py image.jpg --destination .\output\
@@ -63,7 +63,7 @@ Running on Image and showing to screen
 ```sh
 python vision.py image.jpg --show True
 ```
-Running on Video, showing to screen, and Using GPU (By default, GPU use is True)
+Running on Video, showing to screen, and Using GPU (By default, GPU use is)
 ```sh
 python vision.py image.jpg --show True --gpu True
 ```
