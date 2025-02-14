@@ -54,7 +54,7 @@ Running on a Live Camera
 ```py
 python vision.py 0 --show True
 ```
-### 5.5 Optional Arguments
+### Optional Arguments
 Running on Image and saving to disk
 ```py
 python vision.py image.jpg --destination .\output\
