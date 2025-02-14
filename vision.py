@@ -9,6 +9,7 @@ parser = argparse.ArgumentParser(description="Demo script for passing arguments.
 
 # Define expected arguments
 parser.add_argument("source", type=str, help="Input File (an Image, Video File, or Camera ID)")
+parser.add_argument("model", type=str, help="Pretrained Model File (.pt file)")
 parser.add_argument("--destination", type=str, default="" , help="Preferred Output Path for Predictions")
 parser.add_argument("--gpu", type=bool, default=True, help="Enable GPU Acceleration")
 parser.add_argument("--show", type=bool, default=False, help="Enable verbose mode")
@@ -20,6 +21,7 @@ args = parser.parse_args()
 # Set input on the input
 # ---------------------------------------
 source  = args.source.strip() if (args.source.strip().isdigit()) or (os.path.isfile(args.source.strip())) else ""
+modelname = args.model.strip()
 destination  = args.destination.strip() or ""
 
 bool_gpu = args.gpu or False
@@ -45,13 +47,12 @@ def CameraFeed(id):
 if source.isdigit(): CameraFeed(int(source))
 
 
-print("\nSource: "+source, "\noutdir: "+destination, "\ngpu: "+str(bool_gpu), "\nshow: "+str(bool_show), "\nstream: "+str(bool_stream), "\nsave : "+str(bool_save))
+print("\nSource: "+source,"\nmodel: "+modelname, "\noutdir: "+destination, "\ngpu: "+str(bool_gpu), "\nshow: "+str(bool_show), "\nstream: "+str(bool_stream), "\nsave : "+str(bool_save))
 
 
 # ---------------------------------------
 # Set process parameters
 # ---------------------------------------
-model_path   = '.\\models\\fire.pt' # Set path to model
 
 # ---------------------------------------
 # Use GPU if it is available (you may need to change the CUDA_VISIBLE_DEVICES)
@@ -64,7 +65,7 @@ print("Using device:", device)
 # ---------------------------------------
 # Load the model
 # ---------------------------------------
-model = YOLO(model_path)
+model = YOLO(modelname)
 
 # ---------------------------------------
 # Run inference on the input

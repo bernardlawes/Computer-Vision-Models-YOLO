@@ -10,7 +10,7 @@ output_path  = ".\\output\\"        # Set path to output predictions
 # ---------------------------------------
 # Set process parameters
 # ---------------------------------------
-model_path   = '.\\models\\fire.pt' # Set path to model
+model_path   = '.\\fire.pt' # Set path to model
 
 # ---------------------------------------
 # Load the model
