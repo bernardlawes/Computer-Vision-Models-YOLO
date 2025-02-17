@@ -8,11 +8,13 @@ import cv2
 parser = argparse.ArgumentParser(description="Demo script for passing arguments.")
 
 # Define expected arguments
-parser.add_argument("source", type=str, help="Input File (an Image, Video File, or Camera ID)")
 parser.add_argument("model", type=str, help="Pretrained Model File (.pt file)")
+parser.add_argument("source", type=str, help="Input File (an Image, Video File, or Camera ID)")
 parser.add_argument("--destination", type=str, default="" , help="Preferred Output Path for Predictions")
 parser.add_argument("--gpu", type=bool, default=True, help="Enable GPU Acceleration")
 parser.add_argument("--show", type=bool, default=False, help="Enable verbose mode")
+
+#puretalk p0001716338
 
 # Parse arguments
 args = parser.parse_args()

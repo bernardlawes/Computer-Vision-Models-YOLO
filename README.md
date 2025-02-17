@@ -44,11 +44,11 @@ pip list
 ### 5️⃣ Running YOLO Model
 To run the YOLO model on an image file:
 ```py
-python vision.py input.jpg model.pt --show True
+python vision.py model.pt input.jpg  --show True
 ```
 Running on a Video File
 ```py
-python vision.py video.mp4 model.pt --show True
+python vision.py model.pt video.mp4  --show True
 ```
 Running on a Live Camera
 ```py
@@ -57,15 +57,15 @@ python vision.py 0 --show True
 ### Optional Arguments
 Running on Image and saving to disk
 ```py
-python vision.py image.jpg --destination .\output\
+python vision.py model.pt image.jpg --destination .\output\
 ```
 Running on Image and showing to screen
 ```py
-python vision.py image.jpg --show True
+python vision.py model.pt image.jpg --show True
 ```
 Running on Video, showing to screen, and Using GPU (By default, GPU use is True)
 ```py
-python vision.py image.jpg --show True --gpu True
+python vision.py model.pt image.jpg --show True --gpu True
 ```
 
 ### 6️⃣ Updating Dependencies
