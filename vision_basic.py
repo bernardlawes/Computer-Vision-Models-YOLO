@@ -4,13 +4,13 @@ import os
 # ---------------------------------------
 # Set input on the input
 # ---------------------------------------
-input_path   = '.\\data\\fire.jpg'  # Set path to video file
+input_path   = '.\\data\\fire.png'  # Set path to video file
 output_path  = ".\\output\\"        # Set path to output predictions
 
 # ---------------------------------------
 # Set process parameters
 # ---------------------------------------
-model_path   = '.\\fire.pt'         # Set path to model
+model_path   = '.\\model_fire.pt'         # Set path to model
 
 # ---------------------------------------
 # Load the model
